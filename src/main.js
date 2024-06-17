@@ -1,4 +1,8 @@
-import { createApp } from 'vue'
-import App from './App.vue'
+import { createApp } from 'vue';
+import App from './App.vue';
+import { World } from './world';
 
-createApp(App).mount('#app')
+const app = createApp(App);
+app.config.globalProperties.$world = new World();
+app.mount('#app');
+
